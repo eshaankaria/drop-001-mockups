@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Drop 001 Plain</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Geist+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
+<nav aria-label="Versions" style="background:#000;display:flex;justify-content:center;flex-wrap:wrap;font:500 12px ui-monospace,Menlo,monospace;letter-spacing:.06em;text-transform:uppercase;position:relative;z-index:2"><a href="../plain/index.html" style="display:inline-flex;align-items:center;min-height:44px;padding:0 14px;color:#fff;text-decoration:underline;text-underline-offset:4px;opacity:1">Plain (the 4-piece drop)</a><a href="../talk/index.html" style="display:inline-flex;align-items:center;min-height:44px;padding:0 14px;color:#fff;text-decoration:none;text-underline-offset:4px;opacity:.7">Talk</a><a href="../meditate/index.html" style="display:inline-flex;align-items:center;min-height:44px;padding:0 14px;color:#fff;text-decoration:none;text-underline-offset:4px;opacity:.7">Meditate</a></nav>
+<div id="app" data-page="floor">
+  <div class="window"><span id="winLabel" role="status"></span><span class="clock" id="clock" aria-hidden="true"></span></div>
+  <header class="top">
+    <a class="mark" href="index.html" aria-label="Home. The brand name goes here."><i></i></a>
+    <span class="top__drop">Drop 001</span>
+    <button class="bagbtn" id="bagOpen" aria-haspopup="dialog">Bag <span id="bagCount">0</span></button>
+  </header>
+  <main>
+    <section class="floor" id="floor" aria-label="Drop 001"></section>
+
+    <section class="gate" id="gate" hidden>
+      <p class="bigclock" id="bigClock" aria-hidden="true"><span class="u"><b>00</b><small>Days</small></span><i>:</i><span class="u"><b>00</b><small>Hours</small></span><i>:</i><span class="u"><b>00</b><small>Min</small></span><i>:</i><span class="u"><b>00</b><small>Sec</small></span></p>
+      <p class="gate__when" id="opensText"></p>
+      <form class="signup" novalidate>
+        <input id="signupBefore" type="text" inputmode="email" autocomplete="email" placeholder="Email or phone" aria-label="Email or phone, to hear when the drop opens">
+        <button type="submit">Tell me</button>
+      </form>
+      <p class="signup__done" role="status"></p>
+    </section>
+
+    <section class="gate after" id="after" hidden>
+      <p>Hear about Drop 002 first.</p>
+      <form class="signup" novalidate>
+        <input id="signupAfter" type="text" inputmode="email" autocomplete="email" placeholder="Email or phone" aria-label="Email or phone, to hear about the next drop">
+        <button type="submit">Tell me</button>
+      </form>
+      <p class="signup__done" role="status"></p>
+    </section>
+  </main>
+  <footer>
+    <nav aria-label="Store">
+      <a href="#shipping">Shipping</a><a href="#returns">Returns</a><a href="#contact">Contact</a>
+    </nav>
+    <span>Mockup. Placeholder art, prices and dates. Nothing is saved or charged.</span>
+  </footer>
+
+  <dialog class="bag" id="bag" aria-labelledby="bagTitle">
+    <div class="bag__in">
+      <div class="bag__head"><span id="bagTitle">Bag</span><button class="bag__close" id="bagClose">Close</button></div>
+      <div class="bag__lines" id="bagLines"></div>
+      <div class="bag__total"><span>Total</span><span id="bagTotal">$0</span></div>
+      <button class="buy" id="bagCheckout">Checkout</button>
+      <p class="bag__note" id="bagNote" role="status"></p>
+    </div>
+  </dialog>
+
+  <div class="mock" role="group" aria-label="Mockup state">
+    <span>Mockup state</span>
+    <button data-state="before">Before</button><button data-state="open">Open</button><button data-state="closed">Closed</button>
+  </div>
+</div>
+<script src="assets/js/site.js"></script>
+</body>
+</html>
